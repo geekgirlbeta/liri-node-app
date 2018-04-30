@@ -28,6 +28,53 @@ Clone or download the github repository.
 git clone git@github.com:geekgirlbeta/liri-node-app.git
 ```
 
-## Deployment
+Install dotenv into the liri-node-app directory.
 
+```
+npm install dotenv --save
+```
+Make a .gitignore file and add the following lines to it.
+
+```
+node_modules
+.DS_Store
+.env
+```
+
+Create a file named .env, add the following to it, replacing the values with your API keys (no quotes) once you have them
+
+```
+# Spotify API keys
+
+SPOTIFY_ID=your-spotify-id
+SPOTIFY_SECRET=your-spotify-secret
+
+# Twitter API keys
+
+TWITTER_CONSUMER_KEY=your-twitter-consumer-key
+TWITTER_CONSUMER_SECRET=your-twitter-consumer-secret
+TWITTER_ACCESS_TOKEN_KEY=your-access-token-key
+TWITTER_ACCESS_TOKEN_SECRET=your-twitter-access-token-secret
+
+```
+
+## Running the app from the command line.
+
+```
+node liri.js my-tweets
+
+node liri.js spotify-this-song '<song name here>'
+
+node liri.js movie-this '<movie name here>'
+
+node liri.js do-what-it-says
+```
+
+These commands will log data into a log.txt file.
+
+* `my-tweets`
+
+* `spotify-this-song`
+
+* `movie-this`
 
